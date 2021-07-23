@@ -65,5 +65,17 @@ namespace MaximumNumber
 
 
         }
+
+
+       public static string FindMaximum<T>(T FirstPlace, T SecondPlace, T ThirdPlace) where T : IComparable<T>
+       {
+            if (FirstPlace.CompareTo(SecondPlace) > 0 && FirstPlace.CompareTo(ThirdPlace) > 0)
+                return FirstPlace.ToString();
+            else if (SecondPlace.CompareTo(FirstPlace) > 0 && SecondPlace.CompareTo(ThirdPlace) > 0)
+                return SecondPlace.ToString();
+            else if (ThirdPlace.CompareTo(FirstPlace) > 0 && ThirdPlace.CompareTo(SecondPlace) > 0)
+                return ThirdPlace.ToString();
+            else throw new Exception("Values are same");
+       }
     }
 }
