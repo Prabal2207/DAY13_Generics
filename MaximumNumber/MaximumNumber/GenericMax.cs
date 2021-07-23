@@ -3,6 +3,7 @@ namespace MaximumNumber
 {
     public class GenericMaximum<T> where T : IComparable //Where T data type should inherit IComparable
     {
+
         public T[] value;
         public GenericMaximum(T[] value)
         {
